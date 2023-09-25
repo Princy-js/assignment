@@ -104,7 +104,13 @@ class _LoginPageState extends State<LoginPage> {
                 minWidth: double.infinity,
                 height: 60,
                 onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+                  final valid = key.currentState!.validate();
+                  if(valid){
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => HomePage()));
+                  }else{
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:Text("Invalid datas")));
+                  }
                 },
                 color: Colors.green,
                 shape: RoundedRectangleBorder(
