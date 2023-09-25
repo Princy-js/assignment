@@ -22,7 +22,7 @@ class SplashPage extends StatelessWidget{
             ),
             Text("Hello There!",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 70,
                 fontWeight:FontWeight.bold,
               ),
             ),
@@ -46,34 +46,42 @@ class SplashPage extends StatelessWidget{
             SizedBox(
               height: 30,
             ),
-            SizedBox(
-              width: 250, // Set the desired width
-              height: 50, // Set the desired height
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.green)
-                ),
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>LoginPage()));
-                },
-                child: Text('Login'),
+            MaterialButton(
+              minWidth: 500,
+              height: 60,
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>LoginPage()));
+              },
+              color: Colors.green,
+              shape: RoundedRectangleBorder(
+                  side: BorderSide(
+                      color: Colors.green
+                  ),
+                  borderRadius: BorderRadius.circular(40)
               ),
+              child: Text("login",style: TextStyle(
+                  fontSize:15,fontWeight: FontWeight.w500,color: Colors.white
+              ),),
             ),
             SizedBox(
               height: 30,
             ),
-            SizedBox(
-              width: 250, // Set the desired width
-              height: 50, // Set the desired height
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor:MaterialStateProperty.all<Color>(Colors.green),
-                ),
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Registration()));
+            MaterialButton(
+                minWidth: 500,
+                height: 60,
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Registration()));
                 },
-                child: Text('Register'),
+            color: Colors.green,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.green
+                ),
+                borderRadius: BorderRadius.circular(40)
               ),
+              child: Text("Register",style: TextStyle(
+                fontSize:15,fontWeight: FontWeight.w500,color: Colors.white
+              ),),
             )
 
 

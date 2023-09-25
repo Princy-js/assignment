@@ -100,22 +100,22 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 60,
               ),
-              SizedBox(
-                width:double.infinity,
-                height: 50,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.green)
+              MaterialButton(
+                minWidth: double.infinity,
+                height: 60,
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+                },
+                color: Colors.green,
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                        color: Colors.green
                     ),
-                      onPressed: (){
-                      final valid = key.currentState!.validate();
-                      if(valid){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
-                      }else{
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Invalid datas")));
-                      }
-                      },
-                      child:Text("Login"))
+                    borderRadius: BorderRadius.circular(40)
+                ),
+                child: Text("login",style: TextStyle(
+                    fontSize:15,fontWeight: FontWeight.w500,color: Colors.white
+                ),),
               ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
