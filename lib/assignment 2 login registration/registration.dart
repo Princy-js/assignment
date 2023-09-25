@@ -1,3 +1,4 @@
+import 'package:assignment/assignment%202%20login%20registration/login.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -112,14 +113,14 @@ class _RegistrationState extends State<Registration> {
                     suffixIcon: IconButton(
                         onPressed: (){
                           setState(() {
-                            if(passwordhidden == true){
-                              passwordhidden = false;
+                            if(cpassword == true){
+                              cpassword = false;
                             }else{
-                              passwordhidden = true;
+                              cpassword = true;
                             }
                           });
                         }, icon:Icon(
-                        passwordhidden == true
+                        cpassword == true
                             ?Icons.visibility_off_sharp:
                         Icons.visibility) ),
                     prefixIcon: Icon(Icons.lock),
@@ -148,11 +149,13 @@ class _RegistrationState extends State<Registration> {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Invalid datas")));
                         }
                       },
-                      child:Text("Login"))
+                      child:Text("register"))
               ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: TextButton(onPressed: (){}, child:Text("Do you ahve an account? Sign up")),
+                child: TextButton(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>LoginPage()));
+                }, child:Text("Do you ahve an account? Login")),
               )
             ],
           ),

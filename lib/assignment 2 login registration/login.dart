@@ -1,3 +1,4 @@
+import 'package:assignment/assignment%202%20login%20registration/registration.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -118,7 +119,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: TextButton(onPressed: (){}, child:Text("Do you ahve an account? Sign up")),
+                child: TextButton(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Registration()));
+                }, child:Text("Do you ahve an account? Sign up")),
               )
             ],
           ),
