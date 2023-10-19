@@ -10,11 +10,11 @@ class Listview2 extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Cities Around World")),
+        title: const Center(child: Text("Cities Around World")),
         backgroundColor: Colors.deepOrange,
       ),
       body: ListView(
-        children: [
+        children: const [
           SizedBox(height: 20,),
           Card(
             color: Colors.orange,
