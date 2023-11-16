@@ -19,7 +19,7 @@ class Product_Ass extends StatelessWidget {
       required this.text4,
       required this.icon1,
       required this.icon2,
-      required this.icon3});
+        this.icon3});
 
   @override
   Widget build(BuildContext context) {

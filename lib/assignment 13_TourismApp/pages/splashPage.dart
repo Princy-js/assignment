@@ -15,21 +15,20 @@ class IntroPage extends StatefulWidget {
   @override
   State<IntroPage> createState() => _IntroPageState();
 }
-
 class _IntroPageState extends State<IntroPage> {
+  @override
   void initState() {
-    Timer(Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => Login_SIgnUp()));
     });
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
@@ -39,7 +38,7 @@ class _IntroPageState extends State<IntroPage> {
               Colors.lightBlue,
               Colors.blueAccent
             ])),
-        child: Center(
+        child: const Center(
           child: Image(
             image: AssetImage("assets/images/tour1-removebg-preview.png"),
             width: 200,
