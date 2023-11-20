@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(MaterialApp(
-    home: SecondPage(),
-  ));
-}
+// void main(){
+//   runApp(MaterialApp(
+//     home: SecondPage(),
+//   ));
+// }
 class SecondPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

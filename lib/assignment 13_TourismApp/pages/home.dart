@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          trailing: CircleAvatar(),
+          trailing: CircleAvatar(backgroundColor: Colors.blue,),
         ),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(60),

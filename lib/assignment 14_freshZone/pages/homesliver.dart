@@ -9,7 +9,7 @@ import '../refactoring pages/box3_refactor.dart';
 import '../refactoring pages/box4_refactor.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: HomePageFFZ(),
   ));
 }
@@ -22,7 +22,7 @@ class HomePageFFZ extends StatefulWidget {
 }
 
 class _HomePageFFZState extends State<HomePageFFZ> {
-  int _currentIndex = 0;
+  // int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +108,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Color(0xFF2DB457),
+            backgroundColor: const Color(0xFF2DB457),
             title: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -119,16 +119,16 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                     style: GoogleFonts.acme(color: Colors.white, fontSize: 19),
                   ),
                 ),
-                Icon(
+                const Icon(
                   Icons.location_on_outlined,
                   color: Colors.white,
                   size: 20,
                 ),
-                Text(
+                const Text(
                   'Kochi',
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
-                Icon(
+                const Icon(
                   Icons.arrow_drop_down,
                   size: 30,
                   color: Colors.white,
@@ -136,7 +136,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
               ],
             ),
             bottom: PreferredSize(
-              preferredSize: Size.fromHeight(60),
+              preferredSize: const Size.fromHeight(60),
               child: Padding(
                 padding: const EdgeInsets.only(
                     bottom: 18.0, top: 15, left: 6, right: 6),
@@ -146,7 +146,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5)),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration(
                       prefixIcon: Icon(
                         Icons.search,
@@ -179,7 +179,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                               onPressed: () {},
                               child: Text(
                                 text[index],
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.green, fontSize: 10),
                               ),
                               color: Colors.green[100],
@@ -197,7 +197,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                       Container(
                         width: double.infinity,
                         height: 100,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.fitWidth,
                                 image: AssetImage(
@@ -206,7 +206,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                       Container(
                         width: double.infinity,
                         height: 400,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.fitWidth,
                                 image: AssetImage(
@@ -215,7 +215,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                       Container(
                         width: double.infinity,
                         height: 400,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.fitWidth,
                                 image: AssetImage(
@@ -223,7 +223,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                       ),
                       Container(
                         width: double.infinity,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.fitWidth,
                                 image: AssetImage(
@@ -249,8 +249,8 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                         width: .8,
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         children: [
                           Column(
@@ -261,7 +261,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.only(top: 4.0, left: 4),
+                                    EdgeInsets.only(top: 4.0, left: 4),
                                 child: Text(
                                   '30 MINS POLICY',
                                   style: TextStyle(
@@ -282,7 +282,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                 height: 30,
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 4.0),
+                                padding: EdgeInsets.only(top: 4.0),
                                 child: Text(
                                   'TRACEABILITY',
                                   style: TextStyle(
@@ -302,7 +302,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                 height: 30,
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 4.0),
+                                padding: EdgeInsets.only(top: 4.0),
                                 child: Text(
                                   'LOCALSOURCING',
                                   style: TextStyle(
@@ -318,7 +318,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                 ),
                 Column(
                   children: [
-                    Align(
+                    const Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         ' Shop By Category',
@@ -326,14 +326,14 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: 8,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3),
                         itemBuilder: (context, index) {
                           return Box1(
@@ -345,26 +345,26 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0, bottom: 12),
                   child: Container(
-                    color: Color(0xFFF2F3F2),
-                    child: Image(
+                    color: const Color(0xFFF2F3F2),
+                    child: const Image(
                         image: AssetImage('assets/farmersFZ/banner1.jpeg')),
                   ),
                 ),
-                Align(
+                const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Best Selling Products',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 GridView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 14,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         mainAxisExtent: 270, crossAxisCount: 2),
                     itemBuilder: (context, index) {
                       return Box2(
@@ -380,9 +380,9 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                       borderRadius: BorderRadius.circular(4)),
                   minWidth: 390,
                   height: 30,
-                  color: Color(0xFF2DB457),
+                  color: const Color(0xFF2DB457),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'VIEW MORE',
                     style: TextStyle(color: Colors.white),
                   ),
@@ -390,19 +390,19 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                 Padding(
                   padding: const EdgeInsets.only(top: 5.0, bottom: 12),
                   child: Container(
-                    color: Color(0xFFF2F3F2),
-                    child: Image(
+                    color: const Color(0xFFF2F3F2),
+                    child: const Image(
                         image: AssetImage('assets/farmersFZ/banner2.jpeg')),
                   ),
                 ),
-                Align(
+                const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Our Blog Posts',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -411,20 +411,20 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                     scrollDirection: Axis.horizontal,
                     children: [
                       Box3(
-                          imageb: AssetImage('assets/farmersFZ/blog1.jpg'),
+                          imageb: const AssetImage('assets/farmersFZ/blog1.jpg'),
                           textb: ' Control Blood \n Pressure'),
                       Box3(
-                          imageb: AssetImage('assets/farmersFZ/blog2.jpg'),
+                          imageb: const AssetImage('assets/farmersFZ/blog2.jpg'),
                           textb: ' Five Reasons why\n Broccoli '),
                       Box3(
-                          imageb: AssetImage('assets/farmersFZ/blog3.jpg'),
+                          imageb: const AssetImage('assets/farmersFZ/blog3.jpg'),
                           textb: ' Five tips that you\n prevent')
                     ],
                   ),
                 ),
-                Center(
+                const Center(
                     child: Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0),
+                  padding: EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     'VIEW MORE',
                     style: TextStyle(
@@ -432,20 +432,20 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                   ),
                 )),
                 Container(
-                  color: Color(0xFFE6E8E7),
+                  color: const Color(0xFFE6E8E7),
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       Container(
                         color: Colors.white,
                         child: Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
-                            Align(
+                            const Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
                                   'What Our Customers Say?',
@@ -453,13 +453,13 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold),
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
                             CarouselSlider(
                                 items: [
                                   Box4(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/farmersFZ/profile1.jpg'),
                                       text1: 'Dinesh Thambi',
                                       text2: 'VP oerations, TCS',
@@ -471,7 +471,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                           'efforts in providing healthy food to the customer & helping '
                                           'the Ilvelihood of farmers at the same time.'),
                                   Box4(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/farmersFZ/profile2.jpg'),
                                       text1: 'Alosisous',
                                       text2: 'Alosisous',
@@ -484,7 +484,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                           ' for almost three years now. Farmers Fresh Zone Is the best'
                                           ' solution to countless concerned parents like us!'),
                                   Box4(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/farmersFZ/profile3.jpg'),
                                       text1: 'Neethu Vipin',
                                       text2: 'Clerk, Naval Base,Kochi',
@@ -498,7 +498,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                           'fresh & top quality products, my family & I are thoroughly '
                                           'Impressed by their service!'),
                                   Box4(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/farmersFZ/profile5.jpeg'),
                                       text1: 'Shalini Warrier',
                                       text2: 'Executive Director, Federal bank',
@@ -511,7 +511,7 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                           ' for almost three years now. Farmers Fresh Zone Is the best'
                                           ' solution to countless concerned parents like us!'),
                                   Box4(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/farmersFZ/profile4.jpg'),
                                       text1: 'Rinish K N',
                                       text2: 'CTO, Rapid Value',
@@ -526,16 +526,16 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                                           'Impressed by their service!')
                                 ],
                                 options: CarouselOptions(
-                                  autoPlayInterval: Duration(seconds: 9),
+                                  autoPlayInterval: const Duration(seconds: 9),
                                   autoPlay: true,
                                   viewportFraction: 1.0,
                                 )),
                             Container(
                               color: Colors.white,
-                              child: Column(
+                              child: const Column(
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 20.0),
+                                    padding: EdgeInsets.only(top: 20.0),
                                     child: Align(
                                       alignment: Alignment.center,
                                       child: Text(
@@ -594,14 +594,14 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                     ],
                   ),
                 ),
                 Container(
-                  child: Column(
+                  child: const Column(
                     children: [
                       SizedBox(
                         height: 20,
@@ -642,10 +642,10 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Row(
+                const Row(
                   children: [
                     SizedBox(
                       width: 65,
@@ -681,13 +681,13 @@ class _HomePageFFZState extends State<HomePageFFZ> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
                   width: double.infinity,
-                  color: Color(0xFF2DB457),
-                  child: Column(
+                  color: const Color(0xFF2DB457),
+                  child: const Column(
                     children: [
                       SizedBox(
                         height: 15,
@@ -714,48 +714,32 @@ class _HomePageFFZState extends State<HomePageFFZ> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedLabelStyle: TextStyle(color: Colors.green),
-        unselectedLabelStyle: TextStyle(color: Colors.grey),
-        type: BottomNavigationBarType.shifting,
-        currentIndex: _currentIndex,
-        // Make sure to set the currentIndex
-        onTap: (index) {
-          // Add onTap callback to handle index changes
-          setState(() {
-            _currentIndex = index;
-          });
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.black.withOpacity(0.6),
+        selectedFontSize: 14,
+        unselectedFontSize: 14,
+        onTap: (value) {
+          //Respond to item press.
         },
         items: [
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(top: 18.0),
-              child: ImageIcon(
-                AssetImage('assets/farmersFZ/logo.png'),
-                color: Colors.grey, // Set initial color
+          const BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage("assets/farmersFZ/logo.png")),
+              label: "Home"),
+          const BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+              color: Colors.grey,
+            ),
+            label: "Cart",
+          ),
+          const BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                color: Colors.grey,
               ),
-            ),
-            activeIcon: Padding(
-              padding: const EdgeInsets.only(top: 18.0, right: 35),
-              child: ImageIcon(
-                AssetImage('assets/farmersFZ/logo.png'),
-                color: Colors.green, // Set selected color
-              ),
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(right: 35.0),
-              child: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
-            ),
-            activeIcon: Icon(Icons.shopping_cart_outlined, color: Colors.green),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Colors.grey),
-            activeIcon: Icon(Icons.person, color: Colors.green),
-            label: 'Account',
-          ),
+              label: "Account"),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 
+
 import 'package:assignment/assignment%2013_TourismApp/pages/home.dart';
 import 'package:assignment/assignment%2013_TourismApp/pages/register.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,7 @@ class LoginPage extends StatelessWidget{
               const SizedBox(height: 20,),
               ElevatedButton(onPressed: (){
                 if(username !=''  && password != '' ){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>HomePage()));
                 }
                 else{
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Invalid username/password  or the fields are empty")));
